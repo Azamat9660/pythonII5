@@ -24,4 +24,4 @@ class CarViewSet(viewsets.ModelViewSet):
     filterset_class = CarFilter
     search_fields = ['title_name']
     ordering_fields = ['title_name','price','created_date']
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
