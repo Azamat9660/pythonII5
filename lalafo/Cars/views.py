@@ -1,5 +1,4 @@
 from rest_framework import viewsets,permissions
-
 from .serializer import *
 from .models import *
 from django_filters.rest_framework import DjangoFilterBackend
@@ -23,7 +22,6 @@ class CarViewSet(viewsets.ModelViewSet):
     serializer_class = CarSerializer
     filter_backends = [DjangoFilterBackend,SearchFilter, OrderingFilter]
     filterset_class = CarFilter
-    filterset_fields =['color','price']
     search_fields = ['title_name']
     ordering_fields = ['title_name','price','created_date']
     permission_classes = [permissions.IsAuthenticated]

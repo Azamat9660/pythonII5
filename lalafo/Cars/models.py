@@ -5,7 +5,7 @@ class Marka(models.Model):
 
 
 
-    def str(self):
+    def __str__(self):
         return self.marka_name
 
 

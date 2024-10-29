@@ -4,13 +4,13 @@ from .models import *
 class MarkaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Marka
-        fields = 'all'
+        fields = '__all__'
 
 
 class ModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Marka
-        fields = 'all'
+        fields = '__all__'
 
 
 class CarSerializer(serializers.ModelSerializer):
